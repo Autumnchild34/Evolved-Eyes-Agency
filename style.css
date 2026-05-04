@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f9ff;
+    color: #333;
+}
+
+header {
+    background-color: #0a3d91;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+    align-items: center;
+}
+
+header button {
+    background: white;
+    color: #0a3d91;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(to right, #0a3d91, #1e90ff);
+    color: white;
+}
+
+.hero button {
+    margin-top: 20px;
+    padding: 12px 20px;
+    background: white;
+    color: #0a3d91;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.about, .services, .cta {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.services {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+}
+
+.cta {
+    background-color: #0a3d91;
+    color: white;
+}
+
+.cta button {
+    margin-top: 15px;
+    padding: 12px 20px;
+    background: white;
+    color: #0a3d91;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
