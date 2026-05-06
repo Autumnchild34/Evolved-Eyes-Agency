@@ -1,60 +1,689 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Evolved Eyes Agency</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Evolved Eyes Agency | Be Seen Or Be Invisible</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <!-- Font Awesome for social icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <!-- EmailJS SDK — enables contact form to send real emails without a backend -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 <body>
 
-    <!-- NAVBAR -->
-    <header>
-        <h1>Evolved Eyes Agency</h1>
-        <button onclick="scrollToContact()">Contact</button>
-    </header>
+  <!-- ========== NAVIGATION ========== -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <img src="Logo 2.png" alt="Evolved Eyes Agency Logo" class="logo-img" />
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#packages">Packages</a></li>
+        <li><a href="#case-studies">Case Studies</a></li>
+        <li><a href="#why-us">Why Us</a></li>
+        <li><a href="#contact" class="nav-cta">Get Started</a></li>
+      </ul>
+    </div>
+  </nav>
 
-    <!-- HERO SECTION -->
-    <section class="hero">
-        <h2>More Leads. Better Websites. Faster Growth.</h2>
-        <p>We help HVAC businesses generate qualified leads and turn website visitors into paying customers.</p>
-        <button onclick="scrollToContact()">Get More Leads</button>
-    </section>
+  <!-- ========== HERO ========== -->
+  <section id="hero">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-orb orb-1"></div>
+    <div class="hero-orb orb-2"></div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span> HVAC Growth Specialists
+      </div>
+      <h1 class="hero-title">
+        <span class="title-line reveal-up">BE SEEN</span>
+        <span class="title-line reveal-up delay-1">OR BE</span>
+        <span class="title-line accent-line reveal-up delay-2">INVISIBLE</span>
+      </h1>
+      <p class="hero-sub reveal-up delay-3">
+        We build lead generation systems and high-converting websites
+        that help HVAC businesses dominate their local market.
+      </p>
+      <div class="hero-actions reveal-up delay-4">
+        <a href="#packages" class="btn btn-primary">View Packages</a>
+        <a href="#case-studies" class="btn btn-ghost">See Results →</a>
+      </div>
+      <div class="hero-stats reveal-up delay-5">
+        <div class="stat"><span class="stat-num" data-target="3x">0</span><span class="stat-label">Avg. Lead Increase</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num" data-target="87">0</span><span class="stat-label">% Client Retention</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num" data-target="48">0</span><span class="stat-label">Hr Setup Time</span></div>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
 
-    <!-- ABOUT -->
-    <section class="about">
-        <h2>What We Do</h2>
-        <p>
-            At Evolved Eyes Agency, we help HVAC businesses grow by combining high-quality lead generation 
-            with websites designed to convert.
-        </p>
-        <p>
-            Most HVAC companies struggle with inconsistent leads or outdated websites that don’t turn 
-            visitors into paying customers. That’s where we come in.
-        </p>
-    </section>
-
-    <!-- SERVICES -->
-    <section class="services">
-        <h2>Our Services</h2>
-        <div class="card">
-            <h3>Lead Generation</h3>
-            <p>We bring you qualified, ready-to-book customers consistently.</p>
+  <!-- ========== ABOUT ========== -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-visual">
+          <div class="about-img-wrap">
+            <img src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?w=700&q=80" alt="HVAC business growth" />
+            <div class="about-img-badge">
+              <span class="badge-icon">🔥</span>
+              <span>HVAC Industry<br>Specialists</span>
+            </div>
+          </div>
         </div>
-        <div class="card">
-            <h3>Website Design & Revamps</h3>
-            <p>We build and optimize websites that convert traffic into real jobs.</p>
+        <div class="about-text">
+          <div class="section-tag">Who We Are</div>
+          <h2 class="section-title">We Turn HVAC Companies Into Local Market Leaders</h2>
+          <p>Most HVAC businesses have one critical problem — they rely on word of mouth and hope. Hope isn't a growth strategy. We are.</p>
+          <p>Evolved Eyes Agency was built specifically to solve the three biggest revenue killers in the HVAC space: inconsistent leads, websites that don't convert, and follow-up systems that leak potential customers daily.</p>
+          <div class="about-pillars">
+            <div class="pillar">
+              <div class="pillar-icon"><i class="fas fa-bolt"></i></div>
+              <div>
+                <strong>Speed</strong>
+                <span>Systems live in 48 hours</span>
+              </div>
+            </div>
+            <div class="pillar">
+              <div class="pillar-icon"><i class="fas fa-crosshairs"></i></div>
+              <div>
+                <strong>Precision</strong>
+                <span>Local HVAC targeting only</span>
+              </div>
+            </div>
+            <div class="pillar">
+              <div class="pillar-icon"><i class="fas fa-chart-line"></i></div>
+              <div>
+                <strong>Results</strong>
+                <span>Measured in revenue, not clicks</span>
+              </div>
+            </div>
+          </div>
+          <a href="#services" class="btn btn-primary mt-2">Explore Our Services</a>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- CTA -->
-    <section class="cta" id="contact">
-        <h2>Ready to Grow Your HVAC Business?</h2>
-        <p>Let’s help you get more calls, more bookings, and consistent growth.</p>
-        <button onclick="showMessage()">Book a Free Consultation</button>
-        <p id="message"></p>
-    </section>
+  <!-- ========== PROBLEM SECTION ========== -->
+  <section id="problem" class="section section-dark">
+    <div class="container">
+      <div class="section-header center">
+        <div class="section-tag">The Cold Truth</div>
+        <h2 class="section-title">What Happens When HVAC Businesses<br>Don't Have These Systems In Place</h2>
+      </div>
+      <div class="problem-grid">
+        <div class="problem-card">
+          <div class="problem-icon"><i class="fas fa-user-slash"></i></div>
+          <h3>Leads Dry Up</h3>
+          <p>Without consistent ad campaigns and lead funnels, you're invisible to the thousands of local customers searching for HVAC services right now.</p>
+          <div class="problem-stat">78% of HVAC calls go to the first company found online</div>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon"><i class="fas fa-dollar-sign"></i></div>
+          <h3>Revenue Plateaus</h3>
+          <p>Relying on referrals caps your growth. Without scalable systems, you're trading hours for dollars with no predictable revenue pipeline.</p>
+          <div class="problem-stat">Businesses without CRM lose up to 40% of follow-up leads</div>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon"><i class="fas fa-globe"></i></div>
+          <h3>Websites That Kill Conversions</h3>
+          <p>An outdated website with no clear call-to-action is worse than no website. Visitors leave in 8 seconds if they don't see what they need immediately.</p>
+          <div class="problem-stat">A 1-second delay = 7% drop in conversions</div>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon"><i class="fas fa-clock"></i></div>
+          <h3>Slow Follow-Up = Lost Money</h3>
+          <p>If you're not following up with leads within 5 minutes, competitors are. Without automation, you lose paying customers while you're on a job site.</p>
+          <div class="problem-stat">Speed-to-lead increases close rate by 400%</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <script src="script.js"></script>
+  <!-- ========== SERVICES ========== -->
+  <section id="services" class="section">
+    <div class="container">
+      <div class="section-header center">
+        <div class="section-tag">What We Do</div>
+        <h2 class="section-title">Two Core Systems That Drive<br>Predictable HVAC Growth</h2>
+        <p class="section-sub">Every service we offer ties back to one goal: more paying customers for your business.</p>
+      </div>
+      <div class="services-split">
+        <div class="service-block">
+          <div class="service-number">01</div>
+          <div class="service-icon-lg"><i class="fas fa-funnel-dollar"></i></div>
+          <h3>Lead Generation System</h3>
+          <p>We build and manage end-to-end lead pipelines that fill your calendar with qualified HVAC customers consistently.</p>
+          <ul class="service-list">
+            <li><i class="fas fa-check-circle"></i> Facebook & Instagram ad campaigns targeted to local homeowners</li>
+            <li><i class="fas fa-check-circle"></i> CRM setup & configuration to track every lead</li>
+            <li><i class="fas fa-check-circle"></i> Automated follow-up via email, WhatsApp & social media</li>
+            <li><i class="fas fa-check-circle"></i> AI-driven lead nurturing sequences</li>
+            <li><i class="fas fa-check-circle"></i> Monthly performance reports & optimization</li>
+          </ul>
+          <a href="#packages" class="btn btn-outline">See Lead Gen Packages →</a>
+        </div>
+        <div class="service-divider"></div>
+        <div class="service-block">
+          <div class="service-number">02</div>
+          <div class="service-icon-lg"><i class="fas fa-laptop-code"></i></div>
+          <h3>Website Design & Conversion Optimization</h3>
+          <p>We design websites that aren't just beautiful — they're conversion machines built to turn visitors into booked calls.</p>
+          <ul class="service-list">
+            <li><i class="fas fa-check-circle"></i> Custom HVAC website design from scratch</li>
+            <li><i class="fas fa-check-circle"></i> Mobile-first, lightning-fast performance</li>
+            <li><i class="fas fa-check-circle"></i> Clear CTAs — call buttons, booking forms, live chat</li>
+            <li><i class="fas fa-check-circle"></i> SEO-optimized structure for local search</li>
+            <li><i class="fas fa-check-circle"></i> Full website revamps for existing businesses</li>
+          </ul>
+          <a href="#packages" class="btn btn-outline">See Web Design Packages →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PACKAGES ========== -->
+  <section id="packages" class="section section-dark">
+    <div class="container">
+      <div class="section-header center">
+        <div class="section-tag">Pricing</div>
+        <h2 class="section-title">Transparent Packages.<br>Real Results.</h2>
+        <p class="section-sub">No hidden fees. No lock-in contracts. Just systems that grow your business.</p>
+      </div>
+
+      <!-- Package Toggle -->
+      <div class="pkg-toggle">
+        <button class="pkg-tab active" data-tab="leadgen">Lead Generation</button>
+        <button class="pkg-tab" data-tab="webdesign">Website Design</button>
+      </div>
+
+      <!-- LEAD GEN PACKAGES -->
+      <div class="packages-grid" id="pkg-leadgen">
+        <div class="package-card">
+          <div class="pkg-badge">Starter</div>
+          <div class="pkg-price"><span class="currency">$</span>497<span class="per">/mo</span></div>
+          <p class="pkg-tagline">Perfect for HVAC businesses just starting with digital marketing</p>
+          <ul class="pkg-features">
+            <li><i class="fas fa-check"></i> 1 Facebook/Instagram Ad Campaign</li>
+            <li><i class="fas fa-check"></i> Basic CRM Setup (up to 500 contacts)</li>
+            <li><i class="fas fa-check"></i> Email follow-up automation (3 sequences)</li>
+            <li><i class="fas fa-check"></i> Monthly performance report</li>
+            <li><i class="fas fa-check"></i> WhatsApp follow-up integration</li>
+            <li class="disabled"><i class="fas fa-times"></i> A/B ad testing</li>
+            <li class="disabled"><i class="fas fa-times"></i> Advanced retargeting</li>
+          </ul>
+          <a href="#contact" class="btn btn-outline full-width">Get Started</a>
+        </div>
+
+        <div class="package-card featured">
+          <div class="pkg-badge popular">Most Popular</div>
+          <div class="pkg-price"><span class="currency">$</span>997<span class="per">/mo</span></div>
+          <p class="pkg-tagline">The full system for businesses serious about scaling leads</p>
+          <ul class="pkg-features">
+            <li><i class="fas fa-check"></i> 3 Facebook/Instagram Ad Campaigns</li>
+            <li><i class="fas fa-check"></i> Full CRM Setup (unlimited contacts)</li>
+            <li><i class="fas fa-check"></i> Email + WhatsApp + Social automation</li>
+            <li><i class="fas fa-check"></i> A/B ad split testing</li>
+            <li><i class="fas fa-check"></i> Retargeting campaigns</li>
+            <li><i class="fas fa-check"></i> Bi-weekly strategy calls</li>
+            <li><i class="fas fa-check"></i> Bi-weekly performance reports</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary full-width">Get Started</a>
+        </div>
+
+        <div class="package-card">
+          <div class="pkg-badge">Elite</div>
+          <div class="pkg-price"><span class="currency">$</span>1,997<span class="per">/mo</span></div>
+          <p class="pkg-tagline">Full-scale domination for established HVAC companies</p>
+          <ul class="pkg-features">
+            <li><i class="fas fa-check"></i> Unlimited ad campaigns (all platforms)</li>
+            <li><i class="fas fa-check"></i> Enterprise CRM with AI lead scoring</li>
+            <li><i class="fas fa-check"></i> Full omni-channel automation</li>
+            <li><i class="fas fa-check"></i> Google Ads management included</li>
+            <li><i class="fas fa-check"></i> Weekly strategy calls</li>
+            <li><i class="fas fa-check"></i> Dedicated account manager</li>
+            <li><i class="fas fa-check"></i> Real-time dashboard access</li>
+          </ul>
+          <a href="#contact" class="btn btn-outline full-width">Get Started</a>
+        </div>
+      </div>
+
+      <!-- WEB DESIGN PACKAGES -->
+      <div class="packages-grid hidden" id="pkg-webdesign">
+        <div class="package-card">
+          <div class="pkg-badge">Launch</div>
+          <div class="pkg-price"><span class="currency">$</span>799<span class="per"> once-off</span></div>
+          <p class="pkg-tagline">A clean, professional web presence for new HVAC businesses</p>
+          <div class="pkg-fee-note"><i class="fas fa-info-circle"></i> <strong>Domain fee:</strong> ~$15–$20/yr (paid to registrar by client)</div>
+          <ul class="pkg-features">
+            <li><i class="fas fa-check"></i> Up to 5 pages (Home, Services, About, Blog, Contact)</li>
+            <li><i class="fas fa-check"></i> Mobile-responsive design</li>
+            <li><i class="fas fa-check"></i> Contact form + click-to-call button</li>
+            <li><i class="fas fa-check"></i> Basic SEO setup</li>
+            <li><i class="fas fa-check"></i> 30-day post-launch support</li>
+            <li class="disabled"><i class="fas fa-times"></i> Live chat integration</li>
+            <li class="disabled"><i class="fas fa-times"></i> Booking system</li>
+          </ul>
+          <a href="#contact" class="btn btn-outline full-width">Get Started</a>
+        </div>
+
+        <div class="package-card featured">
+          <div class="pkg-badge popular">Most Popular</div>
+          <div class="pkg-price"><span class="currency">$</span>1,499<span class="per"> once-off</span></div>
+          <p class="pkg-tagline">A full conversion-focused website built to generate calls and bookings</p>
+          <div class="pkg-fee-note"><i class="fas fa-info-circle"></i> <strong>Domain fee:</strong> ~$15–$20/yr (paid to registrar by client)</div>
+          <ul class="pkg-features">
+            <li><i class="fas fa-check"></i> Up to 10 custom pages</li>
+            <li><i class="fas fa-check"></i> Conversion-optimized layout & copy</li>
+            <li><i class="fas fa-check"></i> Online booking integration</li>
+            <li><i class="fas fa-check"></i> Live chat widget</li>
+            <li><i class="fas fa-check"></i> Google Analytics setup</li>
+            <li><i class="fas fa-check"></i> Google Business Profile integration</li>
+            <li><i class="fas fa-check"></i> 60-day post-launch support</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary full-width">Get Started</a>
+        </div>
+
+        <div class="package-card">
+          <div class="pkg-badge">Revamp</div>
+          <div class="pkg-price"><span class="currency">$</span>999<span class="per"> once-off</span></div>
+          <p class="pkg-tagline">Transform your existing site into a high-performance conversion machine</p>
+          <div class="pkg-fee-note"><i class="fas fa-info-circle"></i> <strong>Domain fee:</strong> Existing domain retained by client</div>
+          <ul class="pkg-features">
+            <li><i class="fas fa-check"></i> Full redesign of existing site</li>
+            <li><i class="fas fa-check"></i> Speed & performance optimization</li>
+            <li><i class="fas fa-check"></i> Conversion rate audit & fix</li>
+            <li><i class="fas fa-check"></i> Mobile & tablet responsiveness</li>
+            <li><i class="fas fa-check"></i> Updated copy & content structure</li>
+            <li><i class="fas fa-check"></i> 45-day post-launch support</li>
+            <li><i class="fas fa-check"></i> Analytics re-integration</li>
+          </ul>
+          <a href="#contact" class="btn btn-outline full-width">Get Started</a>
+        </div>
+      </div>
+
+      <p class="pkg-disclaimer">* All prices are in USD. Ad spend budget is separate from management fees and is set by the client. Domain fees are paid directly to domain registrars (e.g., GoDaddy, Namecheap) and are not collected by Evolved Eyes Agency.</p>
+    </div>
+  </section>
+
+  <!-- ========== CASE STUDIES ========== -->
+  <section id="case-studies" class="section">
+    <div class="container">
+      <div class="section-header center">
+        <div class="section-tag">Case Studies</div>
+        <h2 class="section-title">Real Strategies. Real Numbers.<br>Real HVAC Growth.</h2>
+        <p class="section-sub">See how our systems have transformed HVAC businesses — and what was at stake without them.</p>
+      </div>
+
+      <div class="case-studies-list">
+
+        <!-- CASE STUDY 1 -->
+        <div class="case-study-card reveal-on-scroll">
+          <div class="cs-image">
+            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=700&q=80" alt="HVAC technician at work" />
+            <div class="cs-outcome positive">+312% Leads in 90 Days</div>
+          </div>
+          <div class="cs-content">
+            <div class="cs-meta">
+              <span class="cs-tag">Lead Generation</span>
+              <span class="cs-location"><i class="fas fa-map-marker-alt"></i> Atlanta, GA</span>
+            </div>
+            <h3>CoolBreeze HVAC — From Struggling to Fully Booked</h3>
+            <div class="cs-columns">
+              <div class="cs-col before">
+                <h4><i class="fas fa-times-circle"></i> Before</h4>
+                <ul>
+                  <li>3–5 leads per month from referrals only</li>
+                  <li>No CRM — leads tracked in a spreadsheet</li>
+                  <li>No follow-up system — lost 60% of enquiries</li>
+                  <li>Revenue plateaued at $8,000/month</li>
+                </ul>
+              </div>
+              <div class="cs-col after">
+                <h4><i class="fas fa-check-circle"></i> After (90 Days)</h4>
+                <ul>
+                  <li>18–22 qualified leads per month from Facebook ads</li>
+                  <li>CRM tracking every lead with automated follow-ups</li>
+                  <li>WhatsApp & email sequences recovering lost leads</li>
+                  <li>Revenue grew to $26,000/month</li>
+                </ul>
+              </div>
+            </div>
+            <blockquote class="cs-quote">
+              "Within 6 weeks we were fully booked. I had to hire two new technicians. I wish I'd done this sooner."
+              <cite>— Marcus T., Owner, CoolBreeze HVAC</cite>
+            </blockquote>
+          </div>
+        </div>
+
+        <!-- CASE STUDY 2 -->
+        <div class="case-study-card reveal-on-scroll reverse">
+          <div class="cs-image">
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=80" alt="Website on laptop" />
+            <div class="cs-outcome positive">+189% Booking Rate</div>
+          </div>
+          <div class="cs-content">
+            <div class="cs-meta">
+              <span class="cs-tag">Website Revamp</span>
+              <span class="cs-location"><i class="fas fa-map-marker-alt"></i> Dallas, TX</span>
+            </div>
+            <h3>PolarAir Systems — A Website That Actually Sells</h3>
+            <div class="cs-columns">
+              <div class="cs-col before">
+                <h4><i class="fas fa-times-circle"></i> Before</h4>
+                <ul>
+                  <li>Website built in 2017 — slow and not mobile-friendly</li>
+                  <li>No clear call-to-action on any page</li>
+                  <li>Bounce rate of 82% — visitors left immediately</li>
+                  <li>Only 2 contact form submissions per month</li>
+                </ul>
+              </div>
+              <div class="cs-col after">
+                <h4><i class="fas fa-check-circle"></i> After (60 Days)</h4>
+                <ul>
+                  <li>Mobile-first redesign — 98/100 speed score</li>
+                  <li>Click-to-call, booking form & live chat added</li>
+                  <li>Bounce rate dropped to 34%</li>
+                  <li>23 contact form submissions in first month</li>
+                </ul>
+              </div>
+            </div>
+            <blockquote class="cs-quote">
+              "Our old website was costing us money. The new one paid for itself within the first 3 weeks."
+              <cite>— Sandra L., Director, PolarAir Systems</cite>
+            </blockquote>
+          </div>
+        </div>
+
+        <!-- CASE STUDY 3 -->
+        <div class="case-study-card reveal-on-scroll">
+          <div class="cs-image">
+            <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=700&q=80" alt="Team meeting reviewing results" />
+            <div class="cs-outcome positive">$47K New Revenue in 6 Months</div>
+          </div>
+          <div class="cs-content">
+            <div class="cs-meta">
+              <span class="cs-tag">Full System (Elite Package)</span>
+              <span class="cs-location"><i class="fas fa-map-marker-alt"></i> Phoenix, AZ</span>
+            </div>
+            <h3>Summit Climate Co. — Full Ecosystem, Maximum Growth</h3>
+            <div class="cs-columns">
+              <div class="cs-col before">
+                <h4><i class="fas fa-times-circle"></i> Before</h4>
+                <ul>
+                  <li>Google Ads running with no tracking or optimization</li>
+                  <li>No social media presence or retargeting</li>
+                  <li>Leads going cold — no automated nurturing</li>
+                  <li>Wasting $1,200/month on ineffective ads</li>
+                </ul>
+              </div>
+              <div class="cs-col after">
+                <h4><i class="fas fa-check-circle"></i> After (6 Months)</h4>
+                <ul>
+                  <li>Full-funnel strategy across FB, IG & Google</li>
+                  <li>AI lead scoring prioritizing hottest prospects</li>
+                  <li>Automated 7-touch follow-up sequences live</li>
+                  <li>ROI of 390% on combined ad spend</li>
+                </ul>
+              </div>
+            </div>
+            <blockquote class="cs-quote">
+              "Evolved Eyes didn't just run ads — they built us a machine. Our revenue hasn't dipped once since we started."
+              <cite>— Daniel R., CEO, Summit Climate Co.</cite>
+            </blockquote>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== WHY US ========== -->
+  <section id="why-us" class="section section-dark">
+    <div class="container">
+      <div class="section-header center">
+        <div class="section-tag">Why Evolved Eyes</div>
+        <h2 class="section-title">What Sets Us Apart From<br>Every Other Marketing Agency</h2>
+      </div>
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-icon"><i class="fas fa-bullseye"></i></div>
+          <h3>HVAC-Only Focus</h3>
+          <p>We don't serve restaurants, salons, or gyms. Only HVAC businesses. This means deeper expertise and faster results because we've already solved your problems before.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon"><i class="fas fa-robot"></i></div>
+          <h3>AI-Powered Systems</h3>
+          <p>We leverage AI for ad optimization, lead scoring, and automated follow-ups — giving your business a competitive edge that traditional marketing can't match.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon"><i class="fas fa-handshake"></i></div>
+          <h3>We Win When You Win</h3>
+          <p>Our pricing is transparent and our success is tied to yours. No retainers for work you can't see. Every dollar spent is tracked and tied to a measurable outcome.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon"><i class="fas fa-tachometer-alt"></i></div>
+          <h3>48-Hour Launch</h3>
+          <p>While competitors take weeks to onboard, we have your system live within 48 hours. Because every day without leads is revenue you'll never get back.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon"><i class="fas fa-shield-alt"></i></div>
+          <h3>No Lock-In Contracts</h3>
+          <p>We earn your business every single month. Our month-to-month model means you stay because the results speak for themselves — not because you're trapped.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon"><i class="fas fa-comments"></i></div>
+          <h3>Real Human Support</h3>
+          <p>No ticket systems. No offshore support. You get direct access to your account manager via WhatsApp, email, or call. We move at the speed of business.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROCESS ========== -->
+  <section id="process" class="section">
+    <div class="container">
+      <div class="section-header center">
+        <div class="section-tag">How It Works</div>
+        <h2 class="section-title">From Sign-Up to First Lead<br>In 4 Simple Steps</h2>
+      </div>
+      <div class="process-steps">
+        <div class="process-step">
+          <div class="step-num">01</div>
+          <div class="step-content">
+            <h3>Discovery Call</h3>
+            <p>We learn your business, target area, current situation, and growth goals. Zero pressure, all value.</p>
+          </div>
+        </div>
+        <div class="process-connector"></div>
+        <div class="process-step">
+          <div class="step-num">02</div>
+          <div class="step-content">
+            <h3>Strategy Build</h3>
+            <p>We craft a custom growth plan — ad strategy, funnel design, CRM configuration, and follow-up sequences.</p>
+          </div>
+        </div>
+        <div class="process-connector"></div>
+        <div class="process-step">
+          <div class="step-num">03</div>
+          <div class="step-content">
+            <h3>System Launch</h3>
+            <p>Everything goes live within 48 hours. Ads running, CRM active, automations firing — all monitored by our team.</p>
+          </div>
+        </div>
+        <div class="process-connector"></div>
+        <div class="process-step">
+          <div class="step-num">04</div>
+          <div class="step-content">
+            <h3>Optimize & Scale</h3>
+            <p>We analyze data weekly, optimize what's working, cut what isn't, and scale your most profitable campaigns.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT ========== -->
+  <section id="contact" class="section section-dark">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="section-tag">Contact Us</div>
+          <h2 class="section-title">Ready To Stop Being<br>Invisible?</h2>
+          <p>Book a free 30-minute strategy call and we'll show you exactly how many leads your business is missing every month — and how to capture them.</p>
+          <div class="contact-links">
+            <a href="https://wa.me/27658054038" target="_blank" rel="noopener" class="contact-link">
+              <div class="contact-link-icon whatsapp"><i class="fab fa-whatsapp"></i></div>
+              <div>
+                <strong>WhatsApp</strong>
+                <span>+27 65 805 4038</span>
+              </div>
+            </a>
+            <a href="mailto:evolved.eyes.agency@gmail.com" class="contact-link">
+              <div class="contact-link-icon email"><i class="fas fa-envelope"></i></div>
+              <div>
+                <strong>Email</strong>
+                <span>evolved.eyes.agency@gmail.com</span>
+              </div>
+            </a>
+          </div>
+          <div class="social-links">
+            <a href="https://www.facebook.com/share/176JD1owBT/" target="_blank" rel="noopener" class="social-btn facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/evolved.eyes.agency" target="_blank" rel="noopener" class="social-btn instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/evolved-eyes-agency/about/" target="_blank" rel="noopener" class="social-btn linkedin" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://wa.me/27658054038" target="_blank" rel="noopener" class="social-btn whatsapp-social" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="contact-form-wrap">
+          <form id="contactForm" class="contact-form" novalidate>
+            <div class="form-group">
+              <label for="name">Full Name *</label>
+              <input type="text" id="name" name="name" placeholder="John Smith" required />
+            </div>
+            <div class="form-group">
+              <label for="business">Business Name *</label>
+              <input type="text" id="business" name="business" placeholder="Cool Air HVAC" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" placeholder="john@coolairhvac.com" required />
+            </div>
+            <div class="form-group">
+              <label for="phone">WhatsApp / Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="+1 555 000 0000" />
+            </div>
+            <div class="form-group">
+              <label for="service">Service Interested In *</label>
+              <select id="service" name="service" required>
+                <option value="" disabled selected>Select a service...</option>
+                <option>Lead Generation – Starter ($497/mo)</option>
+                <option>Lead Generation – Growth ($997/mo)</option>
+                <option>Lead Generation – Elite ($1,997/mo)</option>
+                <option>Website Design – Launch ($799)</option>
+                <option>Website Design – Pro ($1,499)</option>
+                <option>Website Revamp ($999)</option>
+                <option>Not sure – book a strategy call</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Tell Us About Your Business</label>
+              <textarea id="message" name="message" rows="4" placeholder="How many leads do you currently get per month? What's your main challenge?"></textarea>
+            </div>
+            <button type="submit" id="formSubmitBtn" class="btn btn-primary full-width">
+              <i class="fas fa-paper-plane" id="btnIcon"></i>
+              <span id="btnText">Send My Enquiry</span>
+            </button>
+            <div id="formSuccess" class="form-success hidden">
+              <i class="fas fa-check-circle"></i> Thanks! We'll be in touch within 24 hours.
+            </div>
+            <div id="formError" class="form-error hidden">
+              <i class="fas fa-exclamation-circle"></i> <span id="formErrorMsg">Something went wrong. Please try again or email us directly.</span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="Logo 2.png" alt="Evolved Eyes Agency" class="footer-logo" />
+          <p>We help HVAC businesses grow with systems that generate leads, convert visitors, and automate follow-ups.</p>
+          <div class="social-links mt-1">
+            <a href="https://www.facebook.com/share/176JD1owBT/" target="_blank" rel="noopener" class="social-btn facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/evolved.eyes.agency" target="_blank" rel="noopener" class="social-btn instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/evolved-eyes-agency/about/" target="_blank" rel="noopener" class="social-btn linkedin" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://wa.me/27658054038" target="_blank" rel="noopener" class="social-btn whatsapp-social" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="footer-nav">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#packages">Packages & Pricing</a></li>
+            <li><a href="#case-studies">Case Studies</a></li>
+            <li><a href="#why-us">Why Evolved Eyes</a></li>
+            <li><a href="#process">How It Works</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#services">Lead Generation</a></li>
+            <li><a href="#services">Facebook & Instagram Ads</a></li>
+            <li><a href="#services">CRM Setup</a></li>
+            <li><a href="#services">Automated Follow-Up</a></li>
+            <li><a href="#services">Website Design</a></li>
+            <li><a href="#services">Website Revamps</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Get In Touch</h4>
+          <ul>
+            <li><a href="https://wa.me/27658054038" target="_blank"><i class="fab fa-whatsapp"></i> +27 65 805 4038</a></li>
+            <li><a href="mailto:evolved.eyes.agency@gmail.com"><i class="fas fa-envelope"></i> evolved.eyes.agency@gmail.com</a></li>
+            <li><a href="https://www.facebook.com/share/176JD1owBT/" target="_blank"><i class="fab fa-facebook-f"></i> Facebook Page</a></li>
+            <li><a href="https://www.instagram.com/evolved.eyes.agency" target="_blank"><i class="fab fa-instagram"></i> @evolved.eyes.agency</a></li>
+            <li><a href="https://www.linkedin.com/company/evolved-eyes-agency/about/" target="_blank"><i class="fab fa-linkedin-in"></i> LinkedIn Company</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Evolved Eyes Agency. All rights reserved.</p>
+        <p class="footer-motto">Be Seen Or Be Invisible.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Sticky WhatsApp Button -->
+  <a href="https://wa.me/27658054038" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+    <span class="whatsapp-tooltip">Chat with us!</span>
+  </a>
+
+  <!-- Back to top -->
+  <button id="backToTop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+  <script src="script.js"></script>
 </body>
 </html>
